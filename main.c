@@ -23,7 +23,7 @@ int main()
         pommes[i].couleur = 4;
     }
 
-    ST_MUR murs[400];
+    ST_MUR murs[800];
 
     /*--------- Initialisation fichier Highscore ---------*/
     char nom_fichier[60];
@@ -88,7 +88,9 @@ int main()
                 if (!parametres.IA)
                 {
                     new_dir = SP_Gestion_Clavier();
-                } else {
+                }
+                else
+                {
                     new_dir = SP_GET_DIR(serpent, pommes, tableau, parametres.nb_pommes);
                 }
 

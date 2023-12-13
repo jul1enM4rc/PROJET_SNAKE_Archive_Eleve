@@ -267,7 +267,7 @@ void SP_MENU_PARAMETRE(ST_PARAM_JEU *parametre)
             }
             setColor(GREY);
             printf("|               *\n");
-            printf("*    |       e) ");
+            printf("*    |       f) ");
             if (selection == 5)
             {
                 setColor(LIGHTBLUE);
@@ -287,7 +287,7 @@ void SP_MENU_PARAMETRE(ST_PARAM_JEU *parametre)
             printf("         on");
             setColor(GREY);
             printf("             |               *\n");
-            printf("*    |       f) ");
+            printf("*    |       g) ");
             if (selection == 6)
             {
                 setColor(LIGHTBLUE);

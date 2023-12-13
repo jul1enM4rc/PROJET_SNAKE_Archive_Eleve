@@ -157,14 +157,14 @@ void SP_AFFICHER_CADRE(int largeur)
 / serpent (IN) - ST_SNAKE : serpent
 / hauteur (IN) - entier : hauteur du stade
 / largeur (IN) - entier : largeur du stade
-/ murs (IN) - ST_MURS[400] : Liste des murs intérieurs
+/ murs (IN) - ST_MURS[800] : Liste des murs intérieurs
 / Pré-condition : index entre 0 et 14; serpent initialisé
 / Post conditions : nouvelles coordonées valides (ni dans murs, ni dans serpent ni dans autre pomme)
 / ====================================================================================
 / Test : Une pomme se crée dans un endroit sans murs, ni serpent, ni autre pomme
 / ====================================================================================*/
 
-void SP_CREER_POMME(ST_POMME pommes[15], int index, ST_SNAKE serpent, int hauteur, int largeur, ST_MUR murs[400])
+void SP_CREER_POMME(ST_POMME pommes[15], int index, ST_SNAKE serpent, int hauteur, int largeur, ST_MUR murs[800])
 {
     /* Trouver des coordonnées aléatoires */
     int x_rand;
@@ -191,14 +191,14 @@ void SP_CREER_POMME(ST_POMME pommes[15], int index, ST_SNAKE serpent, int hauteu
 / serpent (IN) - ST_SNAKE : serpent
 / hauteur (IN) - entier : hauteur du stade
 / largeur (IN) - entier : largeur du stade
-/ murs (IN/OUT) - ST_MURS[400] : Liste des murs intérieurs
+/ murs (IN/OUT) - ST_MURS[800] : Liste des murs intérieurs
 / Pré-condition : serpent initialisé
 / Post conditions : nouvelles coordonées valides (ni dans autre murs, ni dans serpent ni dans  pomme)
 / ====================================================================================
 / Test : Un mur se crée dans un endroit sans autre murs, ni serpent, ni pomme
 / ====================================================================================*/
 
-void SP_CREER_MURS(ST_POMME pommes[15], ST_SNAKE serpent, int hauteur, int largeur, ST_MUR murs[400])
+void SP_CREER_MURS(ST_POMME pommes[15], ST_SNAKE serpent, int hauteur, int largeur, ST_MUR murs[800])
 {
     /* Trouver des coordonnées aléatoires */
     int x_rand;
@@ -227,14 +227,14 @@ void SP_CREER_MURS(ST_POMME pommes[15], ST_SNAKE serpent, int hauteur, int large
 / y (IN) - entier : coordonnee verticale
 / serpent (IN) - ST_SNAKE : serpent
 / pommes (IN) - ST_POMME[15] : Liste des pommes
-/ murs (IN) - ST_MURS[400] : Liste des murs intérieurs
+/ murs (IN) - ST_MURS[800] : Liste des murs intérieurs
 / Pré-condition : serpent initialisé
 / Post conditions : nouvelles coordonées valides (ni dans autre murs, ni dans serpent ni dans  pomme)
 / ====================================================================================
 / Test :
 / ====================================================================================*/
 
-int SP_CONFLIT(int x, int y, ST_SNAKE serpent, ST_POMME pommes[15], ST_MUR murs[400])
+int SP_CONFLIT(int x, int y, ST_SNAKE serpent, ST_POMME pommes[15], ST_MUR murs[800])
 {
     /* element dans tete */
     if (x == serpent.tete.x && y == serpent.tete.y)
@@ -326,14 +326,14 @@ void SP_DEPLACER_SERPENT(ST_SNAKE *serpent, int couleur_snake, int couleur_fond)
 / serpent (IN) - ST_SNAKE : serpent
 / hauteur (IN) - entier : hauteur du stade
 / largeur (IN) - entier : largeur du stade
-/ murs (IN) - ST_MURS[400] : Liste des murs intérieurs
+/ murs (IN) - ST_MURS[800] : Liste des murs intérieurs
 / Pré-condition : serpent initialisé
 / Post conditions : aucune
 / ====================================================================================
 / Test : retourne 1 en situation d'obstacle
 / ====================================================================================*/
 
-int SP_OBSTACLE(ST_SNAKE serpent, int hauteur, int largeur, ST_MUR murs[400])
+int SP_OBSTACLE(ST_SNAKE serpent, int hauteur, int largeur, ST_MUR murs[800])
 {
     // serpent dans bords
     if (serpent.tete.x == 1 || serpent.tete.x == largeur + 2 || serpent.tete.y == 1 || serpent.tete.y == hauteur + 2)
